@@ -16,6 +16,7 @@ The course is not only "copy and paste", but it explains in depth the tools of U
 - Animation
 - Collision
 - Trigger
+- FX Effects
 
 ### Free play
 
