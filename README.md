@@ -11,6 +11,8 @@ The course is not only "copy and paste", but it explains in depth the tools of U
 - Movements
 - Input Control
 - Physics 3D
+- Raycast
+- HitMarker
 - Animation
 - Collision
 - Trigger
