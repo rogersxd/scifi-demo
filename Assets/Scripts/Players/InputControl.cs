@@ -11,6 +11,9 @@ public class InputControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
         _player = GetComponent<Player>();
         _controller = GetComponent<CharacterController>();
     }
@@ -19,6 +22,7 @@ public class InputControl : MonoBehaviour
     void Update()
     {
         Move();
+        ShowCursor();
     }
 
     void Move()
@@ -30,5 +34,14 @@ public class InputControl : MonoBehaviour
         direction = transform.transform.TransformDirection(direction);
 
         _controller.Move(direction * _player.speed * Time.deltaTime);
+    }
+
+    void ShowCursor()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 }
